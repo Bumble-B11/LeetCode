@@ -1,8 +1,5 @@
 package leetcode883;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class LeetCode883 {
     public static void main(String[] args) {
         int[][] grid =  {
@@ -27,30 +24,33 @@ public class LeetCode883 {
 
     public int projectionArea(int[][] grid) {
         int length = grid.length;
-        Set<Integer> zeroSet = new HashSet<>();
 
         int xz = 0;
         int yz = 0;
+        int zz = 0;
         for (int i = 0; i < length; i ++) {
             int xzMax = 0;
             int yzMax = 0;
             for (int j = 0; j < length; j ++) {
+//                求每一行的最大值
                 if (grid[i][j] > xzMax) {
                     xzMax = grid[i][j];
                 }
 
+//                求每一列的最大值
                 if (grid[j][i] > yzMax) {
                     yzMax = grid[j][i];
                 }
 
-                if (grid[i][j] == 0) {
-                    zeroSet.add(i * 10 + j);
+//                求元素不为0的个数
+                if (grid[i][j] > 0) {
+                    zz ++;
                 }
             }
             xz += xzMax;
             yz += yzMax;
         }
 
-        return xz + yz + length * length - zeroSet.size();
+        return xz + yz + zz;
     }
 }
