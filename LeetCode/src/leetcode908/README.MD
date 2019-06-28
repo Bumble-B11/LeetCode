@@ -1,4 +1,4 @@
-# LeetCode1030
+# LeetCode908
 #### 题目描述
 给定一个数组A和一个整数K。遍历A，给每一个A的元素加入一个x，x的取值范围在[-K, K]之间(给每个元素加的x不一定一样，只要在范围内即可)，得到数组B。求B最大值与最小值之间的差值。
 #### 输入、输出示例
@@ -8,12 +8,14 @@ Example 1:
 > Output: 0
 
 > Explanation: B = [1]
+
 Example 2:
 > Input: A = [0,10], K = 2
 
 > Output: 6
 
 > Explanation: B = [2,8]
+
 Example 3:
 > Input: A = [1,3,6], K = 3
 
