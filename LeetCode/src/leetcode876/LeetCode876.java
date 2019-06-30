@@ -19,10 +19,7 @@ public class LeetCode876 {
             listNodes.add(last);
         }
         int size = listNodes.size();
-        if (size % 2 == 0) {
-            return listNodes.get(size / 2);
-        }
-        return listNodes.get(size / 2 - 1);
+        return listNodes.get(size / 2);
     }*/
 
     /**
