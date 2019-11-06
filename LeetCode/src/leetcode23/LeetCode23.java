@@ -1,14 +1,17 @@
 package leetcode23;
 
+import data.ListNode;
+import utils.LinkedListUtils;
+
 /**
  * Created by bumblebee on 2019/11/4.
  */
 public class LeetCode23 {
 
     public static void main(String[] args) {
-        ListNode l1 = createList(new int[]{1, 4, 5});
-        ListNode l2 = createList(new int[]{1, 3, 4});
-        ListNode l3 = createList(new int[]{2, 6});
+        ListNode l1 = LinkedListUtils.createList(new int[]{1, 4, 5});
+        ListNode l2 = LinkedListUtils.createList(new int[]{1, 3, 4});
+        ListNode l3 = LinkedListUtils.createList(new int[]{2, 6});
 
         ListNode[] lists = new ListNode[3];
         lists[0] = l1;
@@ -71,29 +74,5 @@ public class LeetCode23 {
         }
 
         return head.next;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
-    public static ListNode createList(int[] values) {
-        if (values == null || values.length == 0) {
-            return null;
-        }
-
-        ListNode preHead = new ListNode(0);
-        ListNode head = preHead;
-        for (int i : values) {
-            head.next = new ListNode(i);
-            head = head.next;
-        }
-
-        return preHead.next;
     }
 }
