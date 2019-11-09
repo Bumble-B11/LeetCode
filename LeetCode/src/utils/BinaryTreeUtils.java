@@ -7,7 +7,11 @@ import data.TreeNode;
  */
 public class BinaryTreeUtils {
 
-    public static TreeNode createBinaryTreeByArray(Integer[] array, int index) {
+    public static TreeNode createBinaryTreeByArray(Integer[] array) {
+        return createBinaryTreeByArray(array, 0);
+    }
+
+    private static TreeNode createBinaryTreeByArray(Integer[] array, int index) {
         if (array == null || index >= array.length) {
             return null;
         }

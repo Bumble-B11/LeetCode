@@ -10,8 +10,7 @@ public class LeetCode226 {
 
     public static void main(String[] args) {
         TreeNode root = BinaryTreeUtils.createBinaryTreeByArray(
-                new Integer[]{4, 2, 7, 1, 3, 6, 9}, 0
-        );
+                new Integer[]{4, 2, 7, 1, 3, 6, 9});
 
         root = new LeetCode226().invertTree(root);
         BinaryTreeUtils.preOrderTraversal(root, node -> System.out.println(node.val));
